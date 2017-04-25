@@ -1,0 +1,16 @@
+{
+  "name": "Node.js-Angular-Template",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./server/www",
+    "debug": "nodemon ./server/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "morgan": "^1.8.1",
+    "nodemon": "^1.11.0"
+  }
+}

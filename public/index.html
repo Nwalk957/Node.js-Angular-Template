@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <base href="/"/>
+    <meta charset="UTF-8">
+    <title>Node.js-Angular-Template</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css"/>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a ui-sref="home" class="navbar-brand">Node.js-Angular-Template</a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-left">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{active: $state.includes('home')}"><a ui-sref="home">Home</a></li>
+                    <li ng-class="{active: $state.includes('documentation')}"><a ui-sref="documentation">Documentation</a></li>
+                    <li ng-class="{active: $state.includes('about')}"><a ui-sref="about">About</a></li>
+                </ul>
+            </div>
+
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+    </nav>
+
+    <div id="mainContainer" class="container" style="margin-top: 3em;">
+        <!--Inserted html views from Angular-->
+        <main ui-view></main>
+    </div>
+
+    <footer class="text-center">
+        <p>Copyright &copy; Node.js-Angular-Template</p>
+    </footer>
+
+    <!--Bower Components-->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+    <!--Angular Module-->
+    <script src="app.js"></script>
+
+    <!--Angular Controllers-->
+    <script src="controllers/homeCtrl.js"></script>
+    <script src="controllers/aboutCtrl.js"></script>
+    <script src="controllers/documentationCtrl.js"></script>
+
+
+</body>
+</html>

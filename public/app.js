@@ -14,14 +14,7 @@
         $urlRouterProvider.otherwise('/home');
 
         $stateProvider
-            /*.state('dashboard',{
-                abstract: true,
-                url:'/',
-                templateUrl:'/views/index.html',
-                controllerAs: 'vm',
-                controller: 'homeCtrl'
-            })*/
-
+            
             .state('home',{
                 url: '/home',
                 templateUrl: "/views/home.html",
